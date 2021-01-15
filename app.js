@@ -1,4 +1,3 @@
-const note = document.querySelector(".note-a");
 const snears = document.querySelectorAll(".snear");
 const muteBtn = document.querySelector(".mute-btn");
 const muteBtns = document.querySelector(".mute");
@@ -14,7 +13,6 @@ const skillsBtn = document.querySelector(".skills");
 const projectBtn = document.querySelector(".projects");
 const contactBtn = document.querySelector(".contact");
 const projectSlider = document.querySelector(".project-slider");
-const projectSliderTwo = document.querySelector(".project-slider-two");
 
 let interaction = false;
 let mute = true;
@@ -31,73 +29,37 @@ muteBtns.addEventListener("click", () => {
   }
 });
 
-snears.forEach((snear) => {
-  snear.addEventListener("mouseenter", () => {
-    snear.style.animation = "string .4s ease";
-    setTimeout(() => {
-      snear.style.animation = "";
-    }, 1700);
-  });
-});
-
 const stringA = document.querySelector(".string-a");
 const stringB = document.querySelector(".string-b");
 const stringC = document.querySelector(".string-c");
 const stringD = document.querySelector(".string-d");
 
-//86
 const D2 = new Audio("./notes/D2.wav");
-//84
 const Gb2 = new Audio("./notes/Gb2.wav");
-//82
 const G2 = new Audio("./notes/G2.wav");
-//78
 const A2 = new Audio("./notes/A2.wav");
-//74
 const B2 = new Audio("./notes/B2.wav");
-//70
 const Db3 = new Audio("./notes/Db3.wav");
-//68
 const D3 = new Audio("./notes/D3.wav");
-//64
 const E3 = new Audio("./notes/E3.wav");
-//60
 const Gb3 = new Audio("./notes/Gb3.wav");
-//58
 const G3 = new Audio("./notes/G3.wav");
-//56
 const Ab3 = new Audio("./notes/Ab3.wav");
-//54
 const A3 = new Audio("./notes/A3.wav");
-//50
 const B3 = new Audio("./notes/B3.wav");
-//46
 const Db4 = new Audio("./notes/Db4.wav");
-//44
 const D4 = new Audio("./notes/D4.wav");
-//80
 const E4 = new Audio("./notes/E4.wav");
-//76
 const Gb4 = new Audio("./notes/Gb4.wav");
-//72
 const G4 = new Audio("./notes/G4.wav");
-//68
 const A4 = new Audio("./notes/A4.wav");
-//64
 const B4 = new Audio("./notes/B4.wav");
-//60
 const Db5 = new Audio("./notes/Db5.wav");
-//56
 const D5 = new Audio("./notes/D5.wav");
-//52
 const E5 = new Audio("./notes/E5.wav");
-//48
 const Gb5 = new Audio("./notes/Gb5.wav");
-//44
 const G5 = new Audio("./notes/G5.wav");
-//40
 const A5 = new Audio("./notes/A5.wav");
-//36
 const B5 = new Audio("./notes/B5.wav");
 
 const canonInDLeft = [
@@ -122,12 +84,12 @@ const playLeft = (str) => {
       stringB.style.animation = "string .4s ease-out";
       str[i][2].currentTime = 0;
       str[i][2].play();
-    }, 375);
+    }, 300);
     setTimeout(() => {
       stringC.style.animation = "string .4s ease-out";
       str[i][4].currentTime = 0;
       str[i][4].play();
-    }, 750);
+    }, 600);
     setTimeout(() => {
       stringD.style.animation = "string .4s ease-out";
       str[i][6].currentTime = 0;
@@ -140,20 +102,20 @@ const playLeft = (str) => {
       stringB.style.width = `${str[i][3]}%`;
       stringC.style.width = `${str[i][5]}%`;
       stringD.style.width = `${str[i][7]}%`;
-    }, 1125);
+    }, 900);
 
     setTimeout(() => {
       stringA.style.animation = "";
-    }, 750);
+    }, 600);
     setTimeout(() => {
       stringB.style.animation = "";
-    }, 1000);
+    }, 900);
     setTimeout(() => {
       stringC.style.animation = "";
-    }, 1500);
+    }, 1200);
     setTimeout(() => {
       stringD.style.animation = "";
-    }, 1700);
+    }, 1500);
   }
 };
 
@@ -215,6 +177,30 @@ const canonInDRight = [
   [Gb4, 76, E4, 80, D4, 84, E4, 80, Gb4, 76, G4, 72, A4, 68, B4, 64],
   [G4, 72, 0, 0, B4, 64, A4, 68, B4, 64, 0, 0, Db5, 60, D5, 56],
   [A4, 68, B4, 64, Db5, 60, D5, 56, E5, 52, Gb5, 48, G5, 44, A5, 40],
+  [A5, 40, 0, 0, Gb5, 48, G5, 44, A5, 40, 0, 0, Gb5, 48, G5, 44],
+  [A5, 40, A4, 68, B4, 64, Db5, 60, D5, 56, E5, 52, Gb5, 48, G5, 72],
+  [Gb5, 48, 0, 0, D5, 56, E5, 52, Gb5, 48, 0, 0, Gb4, 76, G4, 72],
+  [A4, 68, B4, 64, A4, 68, G4, 72, A4, 68, Gb4, 76, G4, 72, A4, 68],
+  [G4, 72, 0, 0, B4, 64, A4, 68, G4, 72, 0, 0, Gb4, 76, E4, 80],
+  [Gb4, 76, E4, 80, D4, 84, E4, 80, Gb4, 76, G4, 72, A4, 68, B4, 64],
+  [G4, 72, 0, 0, B4, 64, A4, 68, B4, 64, 0, 0, Db5, 60, D5, 56],
+  [A4, 68, B4, 64, Db5, 60, D5, 56, E5, 52, Gb5, 48, G5, 44, A5, 40],
+  [Gb5, 48, 0, 0, D5, 56, E5, 52, Gb5, 48, 0, 0, E5, 52, D5, 56],
+  [E5, 52, Db5, 60, D5, 56, E5, 52, Gb5, 48, E5, 52, D5, 56, Db5, 60],
+  [D5, 56, 0, 0, B4, 64, Db5, 60, D5, 56, 0, 0, D5, 56, E5, 52],
+  [Gb5, 48, G5, 44, Gb5, 48, E5, 52, Gb5, 48, D5, 56, Db5, 60, D5, 56],
+  [B4, 64, 0, 0, D5, 56, Db5, 60, B4, 64, 0, 0, A4, 68, G4, 72],
+  [A4, 68, G4, 72, Gb4, 76, G4, 72, A4, 68, B4, 64, Db5, 60, D5, 56],
+  [B4, 64, 0, 0, D5, 56, Db5, 60, D5, 56, 0, 0, Db5, 60, B4, 64],
+  [Db5, 60, A4, 68, B4, 64, Db5, 60, D5, 56, E5, 52, Gb5, 48, G5, 44],
+  [A5, 40, 0, 0, D5, 56, 0, 0, Gb5, 48, 0, 0, A5, 40, 0, 0],
+  [A5, 40, 0, 0, B5, 36, 0, 0, A5, 40, 0, 0, G5, 44, 0, 0],
+  [Gb5, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Gb5, 48, 0, 0],
+  [Gb5, 48, 0, 0, G5, 44, 0, 0, Gb5, 48, 0, 0, E5, 52, 0, 0],
+  [D5, 56, 0, 0, Db5, 60, 0, 0, B4, 64, 0, 0, Db5, 60, 0, 0],
+  [D5, 56, 0, 0, 0, 0, 0, 0, A4, 68, 0, 0, 0, 0, A4, 68],
+  [D5, 56, 0, 0, Db5, 60, 0, 0, B4, 64, 0, 0, Db5, 60, 0, 0],
+  [D5, 56, 0, 0, 0, 0, 0, 0, Db5, 60, 0, 0, 0, 0, 0, 0],
 ];
 
 let j = 0;
@@ -232,42 +218,42 @@ const playRight = (str) => {
         str[j][2].currentTime = 0;
         str[j][2].play();
       }
-    }, 187);
+    }, 150);
     setTimeout(() => {
       if (str[j][4] != 0) {
         stringG.style.animation = "stringtwo .4s ease-out";
         str[j][4].currentTime = 0;
         str[j][4].play();
       }
-    }, 375);
+    }, 300);
     setTimeout(() => {
       if (str[j][6] != 0) {
         stringH.style.animation = "stringtwo .4s ease-out";
         str[j][6].currentTime = 0;
         str[j][6].play();
       }
-    }, 562);
+    }, 450);
     setTimeout(() => {
       if (str[j][8] != 0) {
         stringI.style.animation = "stringtwo .4s ease-out";
         str[j][8].currentTime = 0;
         str[j][8].play();
       }
-    }, 750);
+    }, 600);
     setTimeout(() => {
       if (str[j][10] != 0) {
         stringJ.style.animation = "stringtwo .4s ease-out";
         str[j][10].currentTime = 0;
         str[j][10].play();
       }
-    }, 937);
+    }, 750);
     setTimeout(() => {
       if (str[j][12] != 0) {
         stringK.style.animation = "stringtwo .4s ease-out";
         str[j][12].currentTime = 0;
         str[j][12].play();
       }
-    }, 1125);
+    }, 900);
     setTimeout(() => {
       if (str[j][14] != 0) {
         stringL.style.animation = "stringtwo .4s ease-out";
@@ -277,7 +263,7 @@ const playRight = (str) => {
 
       j++;
       if (j == str.length) {
-        j = 0;
+        j = 8;
       }
       stringE.style.width = `${str[j][1]}%`;
       stringF.style.width = `${str[j][3]}%`;
@@ -287,45 +273,44 @@ const playRight = (str) => {
       stringJ.style.width = `${str[j][11]}%`;
       stringK.style.width = `${str[j][13]}%`;
       stringL.style.width = `${str[j][15]}%`;
-    }, 1312);
+    }, 1050);
 
     setTimeout(() => {
       stringE.style.animation = "";
-    }, 625);
+    }, 600);
     setTimeout(() => {
       stringF.style.animation = "";
     }, 750);
     setTimeout(() => {
       stringG.style.animation = "";
-    }, 975);
+    }, 900);
     setTimeout(() => {
       stringH.style.animation = "";
-    }, 1100);
+    }, 1050);
     setTimeout(() => {
       stringI.style.animation = "";
-    }, 1225);
+    }, 1200);
     setTimeout(() => {
       stringJ.style.animation = "";
-    }, 1450);
+    }, 1350);
     setTimeout(() => {
       stringK.style.animation = "";
-    }, 1675);
+    }, 1500);
     setTimeout(() => {
       stringL.style.animation = "";
-    }, 1800);
+    }, 1650);
   }
 };
 
 setTimeout(() => {
-  setInterval(playLeft, 1500, canonInDLeft);
-}, 900);
-setTimeout(() => {
-  setInterval(playRight, 1500, canonInDRight);
-}, 900);
+  setInterval(playLeft, 1200, canonInDLeft);
+  setInterval(playRight, 1200, canonInDRight);
+}, 650);
 
-document.body.addEventListener("click", () => {
+document.querySelector(".left-container").addEventListener("click", () => {
   if (interaction == false) {
     mute = false;
+    document.querySelector(".click-to-play").innerHTML = "";
   }
   interaction = true;
 });
@@ -454,8 +439,7 @@ const callX = () => {
       }
       if (block.classList.contains("x4")) {
         setTimeout(() => {
-          block.classList.add("x0");
-          block.classList.add("y0");
+          block.classList.add("x0", "y0");
           block.classList.remove("x4", "y1", "y2", "y3", "y4");
         }, 600);
       }
@@ -520,8 +504,7 @@ const callY = () => {
       }
       if (block.classList.contains("y5")) {
         setTimeout(() => {
-          block.classList.add("x0");
-          block.classList.add("y0");
+          block.classList.add("x0", "y0");
           block.classList.remove("y5", "x1", "x2", "x3");
         }, 600);
       }
@@ -563,9 +546,20 @@ const callYy = () => {
   }, 600);
 };
 
-setInterval(call, 1800);
+setInterval(call, 2000);
 
 homeBtn.addEventListener("click", () => {
+  const activePage = document.querySelector(".active-page");
+  const activeBtn = document.querySelector(".active");
+  activePage.classList.remove("active-page");
+  activeBtn.classList.remove("active");
+  setTimeout(() => {
+    homePage.classList.add("active-page");
+    homeBtn.classList.add("active");
+  }, 400);
+});
+
+document.querySelector(".logo").addEventListener("click", () => {
   const activePage = document.querySelector(".active-page");
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
@@ -641,3 +635,57 @@ document.querySelector(".contact-button").addEventListener("click", () => {
     contactBtn.classList.add("active");
   }, 800);
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("my-form");
+  const status = document.getElementById("form-status");
+  const inputText = document.querySelector(".input-text");
+  const inputEmail = document.querySelector(".input-email");
+  const inputSubmit = document.querySelector(".button");
+  const inputMessage = document.querySelector(".message");
+
+  function success() {
+    form.reset();
+    status.innerHTML = "Thanks for your message! I will reply ASAP!";
+  }
+
+  function error() {
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+  inputSubmit.addEventListener("click", () => {
+    inputText.style = "";
+    inputEmail.style = "";
+    inputMessage.style = "";
+    if (!inputText.checkValidity()) {
+      inputText.style.borderBottom = "2px solid red";
+    }
+    if (!inputEmail.checkValidity()) {
+      inputEmail.style.borderBottom = "2px solid red";
+    }
+    if (!inputMessage.checkValidity()) {
+      inputMessage.style.borderBottom = "2px solid red";
+    }
+  });
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    const data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+  });
+});
+
+function ajax(method, url, data, success, error) {
+  const xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+}

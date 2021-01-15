@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="rotate-warning"><div class="warning-text"><img src="./images/rotate.png" class="rotate-img"> Please rotate your device</div></div>
     <header>
         <div class="logo"><img src="https://freepngimg.com/download/brush/86917-and-watercolor-black-brush-circle-painting-white.png" alt="">
             <div class="logo-text">
@@ -24,18 +23,20 @@
             <i class="far fa-envelope contact"><span>Contact</span></i>
         </nav>
         <div class="socials">
-            <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f facebook"></i></a>
-            <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram insta"></i></a>
-            <a href="http://www.github.com" target="_blank"><i class="fab fa-github github"></i></a>
-            <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter twitter"></i></a>
+            <a href="https://www.facebook.com/mjonkers1" target="_blank"><i class="fab fa-facebook-f facebook"></i></a>
+            <a href="https://www.instagram.com/devjahsjag/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+            <a href="https://github.com/JonkersDev" target="_blank"><i class="fab fa-github github"></i></a>
+            <a href="./cv.html" target="_blank"><i class="far fa-file"></i></a>
         </div>
     </header>
 
 
     <div class="mute">SOUND:<button class="mute-btn" style="color: cyan">ON</button></div>
-
+    <div class="mute-tag tag">mute sound <img src="./images/arrow.png" alt=""></div>
+    <div class="resume-tag tag">View my resume<img src="./images/arrow.png" alt=""></div>
 
     <div class="left-container">
+        <div class="click-to-play tag">Click here to play</div>
         <div class="circle-one circle roll"><div class="note-a note"></div><div class="note-b note"></div></div>
         <div class="circle-two circle reverse"><div class="note-c note"></div><div class="note-d note"></div></div>
         <div class="snears">
@@ -104,9 +105,9 @@
         </div>
         
         <div>
-            <div class="p tag">&lt;img&gt;</div>
+            <div class="p tag img-tag">&lt;img&gt;</div>
                 <img src="./images/profiel.png" class="profile-pic text" alt="">
-            <div class="p tag">&lt;/img&gt;</div>
+            <div class="p tag img-tag">&lt;/img&gt;</div>
         </div>
         
         <div>
@@ -127,7 +128,7 @@
 
         <div>
             <div class="p tag">&lt;p&gt;</div>
-                <p class="p-text text">I started my programming journey with HTML5, followed by CSS3. After a few projects I started using SASS(SCSS) to speed up my styling. After that I learned JavaScript, a language I truly love using but bearly scratched the surface of.Currently I'm learning to use the React Framework. In the future I would like to work more on the back-end.<br><br>If you want to know what I can make when all these skills work together, you should look at the <strong class="pro-link">projects</strong> I made.</p>
+                <p class="p-text text">I started my programming journey with HTML5, followed by CSS3. After a few projects I started using SASS(SCSS) to speed up my styling. After that I learned JavaScript, a language I truly love using but bearly scratched the surface of. Currently I'm learning to use the React Framework. In the future I would like to work more on the back-end.<br><br>If you want to know what I can make when all these skills work together, you should look at the <strong class="pro-link">projects</strong> I made.</p>
             <div class="p tag">&lt;/p&gt;</div>
         </div>
         
@@ -149,12 +150,13 @@
         </div>
 
         <div class="skills-container">
-            <div class="html-gear gear"><i class="fas fa-cog"></i></div>
-            <div class="css-gear gear"><i class="fas fa-cog"></i></div>
-            <div class="scss-gear gear"><i class="fas fa-cog"></i></div>
-            <div class="svg-gear gear"><i class="fas fa-cog"></i></div>
-            <div class="javascript-gear gear"><i class="fas fa-cog"></i></div>
-            <div class="react-gear gear"><i class="fas fa-cog"></i></div>    
+            <img src="./images/gear-plane.png" class="plane-gear">  
+            <img src="./images/html-gear.png" class="html-gear">  
+            <img src="./images/css-gear.png" class="css-gear">  
+            <img src="./images/javascript-gear.png" class="javascript-gear">  
+            <img src="./images/scss-gear.png" class="scss-gear">  
+            <img src="./images/svg-gear.png" class="svg-gear">  
+            <img src="./images/react-gear.png" class="react-gear">  
         </div>
     </div>
 
@@ -209,17 +211,18 @@
         
         <div>
             <div class="p tag">&lt;p&gt;</div>
-                <p class="p-text text">Feel free to contact me. I'm interested in freelance work. If you have an other question or just want to say "hi", go ahead and send me a messange. :D</p>
+                <p class="p-text text">Feel free to contact me. I'm interested in freelance work. If you have an other question or just want to say "hi", go ahead and send me a message. :D</p>
             <div class="p tag">&lt;/p&gt;</div>
         </div>
 
         <div>
             <div class="p tag">&lt;form&gt;</div>
-                <form method="POST" action="mailto:markjonkers.dev@gmail.com" class="text">
-                    <input type="text" placeholder="Name" name="name">
-                    <input type="text" placeholder="E-mail" name="e-mail">
-                    <textarea class="message" id="" cols="30" rows="10" name="message" placeholder="Your kind words go here..."></textarea>
+                <form method="POST" action="https://formspree.io/f/mgepewzw" class="text" id="my-form">
+                    <input type="text" placeholder="Name" name="name" class="input-text" autocomplete="no" required>
+                    <input type="email" placeholder="E-mail" name="e-mail" class="input-email" required>
+                    <textarea class="message" id="" cols="30" rows="10" name="message" placeholder="Your kind words go here..." required></textarea>
                     <input type="submit" value="SEND" class="button">
+                    <div id="form-status"></div>
                 </form>
             <div class="p tag">&lt;/form&gt;</div>
         </div>
