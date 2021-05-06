@@ -13,6 +13,9 @@ const skillsBtn = document.querySelector(".skills");
 const projectBtn = document.querySelector(".projects");
 const contactBtn = document.querySelector(".contact");
 const projectSlider = document.querySelector(".project-slider");
+const resumeTag = document.querySelector(".resume-tag");
+const muteTag = document.querySelector(".mute-tag");
+const musicContainer = document.querySelector(".left-container");
 
 let interaction = false;
 let mute = true;
@@ -320,12 +323,12 @@ let projectArr = [
     {
       color: "to-do.png",
       name: `<div class="name">To-Do List<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-server"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects",
+      url: "https://jonkersdev.github.io/To-Do-List/",
     },
     {
       color: "sort.png",
       name: `<div class="name">Sorting Algorithms<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/sort.html",
+      url: "",
     },
     {
       color: "tree.png",
@@ -337,12 +340,12 @@ let projectArr = [
     {
       color: "path.png",
       name: `<div class="name">Pathfinding Algorithms<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/pathfinding.html",
+      url: "https://jonkersdev.github.io/pathfinding/",
     },
     {
       color: "recipe.png",
       name: `<div class="name">Recipe App<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-cloud cloud"><div>API</div></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/recipe.html",
+      url: "https://jonkersdev.github.io/foodmore/recipe.html",
     },
     {
       color: "ur.png",
@@ -374,9 +377,9 @@ let projectArr = [
       url: "",
     },
     {
-      color: "quick.png",
-      name: `<div class="name">Coming Soon</div>`,
-      url: "",
+      color: "bonsai.png",
+      name: `<div class="name">Unofficial Webshop<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-server"></i></div></div>`,
+      url: "https://jonkersdev.github.io/bonsai/",
     },
     {
       color: "cotton.png",
@@ -546,13 +549,14 @@ const callYy = () => {
   }, 600);
 };
 
-setInterval(call, 2000);
+setInterval(call, 2600);
 
 homeBtn.addEventListener("click", () => {
   const activePage = document.querySelector(".active-page");
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  musicContainer.style = "";
   setTimeout(() => {
     homePage.classList.add("active-page");
     homeBtn.classList.add("active");
@@ -564,6 +568,7 @@ document.querySelector(".logo").addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  musicContainer.style = "";
   setTimeout(() => {
     homePage.classList.add("active-page");
     homeBtn.classList.add("active");
@@ -575,6 +580,7 @@ aboutBtn.addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  musicContainer.style = "";
   setTimeout(() => {
     aboutPage.classList.add("active-page");
     aboutBtn.classList.add("active");
@@ -586,6 +592,7 @@ skillsBtn.addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  musicContainer.style = "opacity: 0";
   setTimeout(() => {
     skillsPage.classList.add("active-page");
     skillsBtn.classList.add("active");
@@ -597,6 +604,9 @@ projectBtn.addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  resumeTag.style.display = "none";
+  muteTag.style.display = "none";
+  musicContainer.style = "opacity: 0";
   setTimeout(() => {
     projectPage.classList.add("active-page");
     projectBtn.classList.add("active");
@@ -608,6 +618,9 @@ document.querySelector(".pro-link").addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  resumeTag.style.display = "none";
+  muteTag.style.display = "none";
+  musicContainer.style = "opacity: 0";
   setTimeout(() => {
     projectPage.classList.add("active-page");
     projectBtn.classList.add("active");
@@ -619,6 +632,9 @@ contactBtn.addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  resumeTag.style.display = "none";
+  muteTag.style.display = "none";
+  musicContainer.style = "opacity: 0";
   setTimeout(() => {
     contactPage.classList.add("active-page");
     contactBtn.classList.add("active");
@@ -630,6 +646,9 @@ document.querySelector(".contact-button").addEventListener("click", () => {
   const activeBtn = document.querySelector(".active");
   activePage.classList.remove("active-page");
   activeBtn.classList.remove("active");
+  resumeTag.style.display = "none";
+  muteTag.style.display = "none";
+  musicContainer.style = "opacity: 0";
   setTimeout(() => {
     contactPage.classList.add("active-page");
     contactBtn.classList.add("active");

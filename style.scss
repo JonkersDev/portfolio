@@ -9,7 +9,10 @@
 }
 
 body {
-  background-color: rgb(30, 30, 30);
+  background-image: url(./images/paperBG.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
   color: white;
   overflow: hidden;
   user-select: none;
@@ -75,6 +78,25 @@ body {
       height: 20%;
       margin-bottom: 3vh;
 
+      .cv-link {
+        position: relative;
+        .resume-tag {
+          position: absolute;
+          display: flex;
+          width: 320px;
+          top: 50%;
+          transform: translateY(-65%);
+          left: 20px;
+          font-size: 16pt !important;
+
+          img {
+            display: block;
+            width: 200px;
+            height: 30px;
+          }
+        }
+      }
+
       i {
         color: white;
         opacity: 0.5;
@@ -122,16 +144,17 @@ body {
 
   .mute-tag {
     position: absolute;
-    right: 10%;
-    top: 18%;
+    right: 170%;
+    top: 340%;
     font-size: 15pt !important;
+    width: 74px;
 
     img {
       position: absolute;
-      transform: rotate(45deg);
-      height: 80px;
-      left: 140%;
-      bottom: 5px;
+      transform: rotate(135deg);
+      width: 80px;
+      left: 100%;
+      bottom: 40px;
     }
   }
 
@@ -152,22 +175,6 @@ body {
       font-size: 12pt;
     }
   }
-
-  .resume-tag {
-    position: absolute;
-    bottom: 45px;
-    left: 265px;
-    font-size: 16pt !important;
-
-    img {
-      position: absolute;
-      left: -120px;
-      top: -80px;
-      transform: rotate(-90deg);
-      width: 30px;
-      height: 200px;
-    }
-  }
   .left-container {
     right: 350px;
     top: 50%;
@@ -178,6 +185,7 @@ body {
     position: absolute;
     z-index: 1;
     cursor: pointer;
+    transition: 0.4s ease;
 
     .click-to-play {
       position: absolute;
@@ -188,26 +196,14 @@ body {
     }
 
     .reverse {
-      background-image: linear-gradient(
-        50deg,
-        white,
-        transparent,
-        transparent,
-        transparent,
-        white
-      );
+      border-left: 2px solid white;
+      border-right: 2px solid white;
       animation: rollrev 4.8s linear infinite;
     }
 
     .roll {
-      background-image: linear-gradient(
-        40deg,
-        white,
-        transparent,
-        transparent,
-        transparent,
-        white
-      );
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
       animation: roll 4.8s linear infinite;
     }
 
@@ -217,19 +213,6 @@ body {
       border-radius: 100%;
       position: relative;
       opacity: 0.5;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 99%;
-        height: 99%;
-        background-color: rgb(30, 30, 30);
-        z-index: 1;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-      }
 
       .note {
         position: absolute;
@@ -300,25 +283,11 @@ body {
         position: relative;
 
         .reverse {
-          background-image: linear-gradient(
-            50deg,
-            cyan,
-            transparent,
-            transparent,
-            transparent,
-            cyan
-          );
+          border-color: cyan;
         }
 
         .roll {
-          background-image: linear-gradient(
-            40deg,
-            cyan,
-            transparent,
-            transparent,
-            transparent,
-            cyan
-          );
+          border-color: cyan;
         }
 
         .circle {
@@ -335,7 +304,7 @@ body {
 }
 
 .tag {
-  color: rgb(71, 71, 71);
+  color: rgb(111, 111, 111);
   font-family: "Yellowtail", cursive;
   transition: 0.8s 0.6s;
 }
@@ -459,7 +428,6 @@ body {
 
 .skills-page {
   z-index: 2;
-  background-color: rgb(30, 30, 30);
 
   .pro-link {
     color: cyan;
@@ -537,7 +505,6 @@ body {
 
 .project-page {
   z-index: 2;
-  background-color: rgb(30, 30, 30);
 
   .project-slider {
     width: 60%;
@@ -550,7 +517,7 @@ body {
       z-index: 2;
       width: 100%;
       height: 100%;
-      background-color: rgba(30, 30, 30, 0.5);
+      background-color: rgba(30, 30, 30, 0.3);
       pointer-events: none;
     }
     .x0 {
@@ -599,6 +566,12 @@ body {
     .y5 {
       top: 100%;
       z-index: 0 !important;
+    }
+
+    .moving {
+      z-index: 0 !important;
+      top: -25%;
+      left: -33.4%;
     }
 
     .pro {
@@ -665,7 +638,6 @@ body {
 
 .contact-page {
   z-index: 2;
-  background-color: rgb(30, 30, 30);
 
   form {
     display: flex;
@@ -956,18 +928,6 @@ body {
     height: 2px;
     border-radius: 100%;
     box-shadow: 0 0 4px cyan;
-  }
-}
-
-@keyframes warning {
-  0% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(135deg);
-  }
-  100% {
-    transform: rotate(45deg);
   }
 }
 
