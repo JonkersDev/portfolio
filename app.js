@@ -328,12 +328,12 @@ let projectArr = [
     {
       color: "sort.png",
       name: `<div class="name">Sorting Algorithms<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "",
+      url: "https://jonkersdev.github.io/sort/",
     },
     {
       color: "tree.png",
       name: `<div class="name">Recursive Tree Algorithm<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/tree.html",
+      url: "https://jonkersdev.github.io/tree/",
     },
   ],
   [
@@ -348,31 +348,31 @@ let projectArr = [
       url: "https://jonkersdev.github.io/foodmore/recipe.html",
     },
     {
-      color: "ur.png",
+      color: "blooger.png",
       name: `<div class="name">Royal Game of Ur<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/ur.html",
+      url: "",
     },
   ],
   [
     {
-      color: "contact.png",
-      name: `<div class="name">Contacts App<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-server"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/contact.html",
+      color: "cotton.png",
+      name: `<div class="name">Coming Soon</div>`,
+      url: "",
     },
     {
-      color: "count.png",
-      name: `<div class="name">Countdown App<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/count.html",
+      color: "quick.png",
+      name: `<div class="name">Coming Soon</div>`,
+      url: "",
     },
-    {
-      color: "mol.png",
-      name: `<div class="name">WIDM Site<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i></div></div>`,
-      url: "https://jonkersdev.github.io/projects/widm.html",
-    },
-  ],
-  [
     {
       color: "blooger.png",
+      name: `<div class="name">Coming Soon</div>`,
+      url: "",
+    },
+  ],
+  [
+    {
+      color: "cotton.png",
       name: `<div class="name">Coming Soon</div>`,
       url: "",
     },
@@ -382,7 +382,7 @@ let projectArr = [
       url: "https://jonkersdev.github.io/bonsai/",
     },
     {
-      color: "cotton.png",
+      color: "quick.png",
       name: `<div class="name">Coming Soon</div>`,
       url: "",
     },
