@@ -37,33 +37,33 @@ const stringB = document.querySelector(".string-b");
 const stringC = document.querySelector(".string-c");
 const stringD = document.querySelector(".string-d");
 
-const D2 = new Audio("./notes/D2.wav");
-const Gb2 = new Audio("./notes/Gb2.wav");
-const G2 = new Audio("./notes/G2.wav");
-const A2 = new Audio("./notes/A2.wav");
-const B2 = new Audio("./notes/B2.wav");
-const Db3 = new Audio("./notes/Db3.wav");
-const D3 = new Audio("./notes/D3.wav");
-const E3 = new Audio("./notes/E3.wav");
-const Gb3 = new Audio("./notes/Gb3.wav");
-const G3 = new Audio("./notes/G3.wav");
-const Ab3 = new Audio("./notes/Ab3.wav");
-const A3 = new Audio("./notes/A3.wav");
-const B3 = new Audio("./notes/B3.wav");
-const Db4 = new Audio("./notes/Db4.wav");
-const D4 = new Audio("./notes/D4.wav");
-const E4 = new Audio("./notes/E4.wav");
-const Gb4 = new Audio("./notes/Gb4.wav");
-const G4 = new Audio("./notes/G4.wav");
-const A4 = new Audio("./notes/A4.wav");
-const B4 = new Audio("./notes/B4.wav");
-const Db5 = new Audio("./notes/Db5.wav");
-const D5 = new Audio("./notes/D5.wav");
-const E5 = new Audio("./notes/E5.wav");
-const Gb5 = new Audio("./notes/Gb5.wav");
-const G5 = new Audio("./notes/G5.wav");
-const A5 = new Audio("./notes/A5.wav");
-const B5 = new Audio("./notes/B5.wav");
+const D2 = new Audio("./notes/D2.mp3");
+const Gb2 = new Audio("./notes/Gb2.mp3");
+const G2 = new Audio("./notes/G2.mp3");
+const A2 = new Audio("./notes/A2.mp3");
+const B2 = new Audio("./notes/B2.mp3");
+const Db3 = new Audio("./notes/Db3.mp3");
+const D3 = new Audio("./notes/D3.mp3");
+const E3 = new Audio("./notes/E3.mp3");
+const Gb3 = new Audio("./notes/Gb3.mp3");
+const G3 = new Audio("./notes/G3.mp3");
+const Ab3 = new Audio("./notes/Ab3.mp3");
+const A3 = new Audio("./notes/A3.mp3");
+const B3 = new Audio("./notes/B3.mp3");
+const Db4 = new Audio("./notes/Db4.mp3");
+const D4 = new Audio("./notes/D4.mp3");
+const E4 = new Audio("./notes/E4.mp3");
+const Gb4 = new Audio("./notes/Gb4.mp3");
+const G4 = new Audio("./notes/G4.mp3");
+const A4 = new Audio("./notes/A4.mp3");
+const B4 = new Audio("./notes/B4.mp3");
+const Db5 = new Audio("./notes/Db5.mp3");
+const D5 = new Audio("./notes/D5.mp3");
+const E5 = new Audio("./notes/E5.mp3");
+const Gb5 = new Audio("./notes/Gb5.mp3");
+const G5 = new Audio("./notes/G5.mp3");
+const A5 = new Audio("./notes/A5.mp3");
+const B5 = new Audio("./notes/B5.mp3");
 
 const canonInDLeft = [
   [D3, 68, Gb3, 60, A3, 54, D4, 44],
@@ -330,11 +330,6 @@ let projectArr = [
       name: `<div class="name">Sorting Algorithms<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
       url: "https://jonkersdev.github.io/sort/",
     },
-    {
-      color: "tree.png",
-      name: `<div class="name">Recursive Tree Algorithm<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "https://jonkersdev.github.io/tree/",
-    },
   ],
   [
     {
@@ -347,44 +342,17 @@ let projectArr = [
       name: `<div class="name">Recipe App<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-cloud cloud"><div>API</div></i></div></div>`,
       url: "https://jonkersdev.github.io/foodmore/recipe.html",
     },
-    {
-      color: "blooger.png",
-      name: `<div class="name">Royal Game of Ur<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i></div></div>`,
-      url: "",
-    },
   ],
   [
-    {
-      color: "cotton.png",
-      name: `<div class="name">Coming Soon</div>`,
-      url: "",
-    },
     {
       color: "quick.png",
       name: `<div class="name">Coming Soon</div>`,
-      url: "",
-    },
-    {
-      color: "blooger.png",
-      name: `<div class="name">Coming Soon</div>`,
-      url: "",
-    },
-  ],
-  [
-    {
-      color: "cotton.png",
-      name: `<div class="name">Coming Soon</div>`,
-      url: "",
+      url: "#",
     },
     {
       color: "bonsai.png",
       name: `<div class="name">Unofficial Webshop<div class="tools"><i class="fab fa-html5"></i><i class="fab fa-sass"></i><i class="fab fa-js"></i><i class="fas fa-server"></i></div></div>`,
       url: "https://jonkersdev.github.io/bonsai/",
-    },
-    {
-      color: "quick.png",
-      name: `<div class="name">Coming Soon</div>`,
-      url: "",
     },
   ],
 ];
@@ -420,7 +388,7 @@ const call = () => {
 };
 
 const callX = () => {
-  let choise = Math.floor(Math.random() * 4) + 1;
+  let choise = Math.floor(Math.random() * 3) + 1;
 
   document.querySelector(".x0").classList.add(`y${choise}`);
   document.querySelector(".x0").classList.remove("y0");
@@ -436,14 +404,11 @@ const callX = () => {
       } else if (block.classList.contains("x2")) {
         block.classList.add("x3");
         block.classList.remove("x2");
-      } else if (block.classList.contains("x3")) {
-        block.classList.add("x4");
-        block.classList.remove("x3");
       }
-      if (block.classList.contains("x4")) {
+      if (block.classList.contains("x3")) {
         setTimeout(() => {
           block.classList.add("x0", "y0");
-          block.classList.remove("x4", "y1", "y2", "y3", "y4");
+          block.classList.remove("x3", "y1", "y2", "y3", "y4");
         }, 600);
       }
     });
@@ -451,17 +416,14 @@ const callX = () => {
 };
 
 const callXx = () => {
-  let choise = Math.floor(Math.random() * 4) + 1;
+  let choise = Math.floor(Math.random() * 3) + 1;
 
-  document.querySelector(".x0").classList.add(`y${choise}`, "x4");
+  document.querySelector(".x0").classList.add(`y${choise}`, "x3");
   document.querySelector(".x0").classList.remove("y0", "x0");
   setTimeout(() => {
     let blocks = document.querySelectorAll(`.y${choise}`);
     blocks.forEach((block) => {
-      if (block.classList.contains("x4")) {
-        block.classList.add("x3");
-        block.classList.remove("x4");
-      } else if (block.classList.contains("x3")) {
+      if (block.classList.contains("x3")) {
         block.classList.add("x2");
         block.classList.remove("x3");
       } else if (block.classList.contains("x2")) {
@@ -482,7 +444,7 @@ const callXx = () => {
 };
 
 const callY = () => {
-  let choise = Math.floor(Math.random() * 3) + 1;
+  let choise = Math.floor(Math.random() * 2) + 1;
 
   document.querySelector(".x0").classList.add(`x${choise}`);
   document.querySelector(".x0").classList.remove("x0");
@@ -501,14 +463,11 @@ const callY = () => {
       } else if (block.classList.contains("y3")) {
         block.classList.add("y4");
         block.classList.remove("y3");
-      } else if (block.classList.contains("y4")) {
-        block.classList.add("y5");
-        block.classList.remove("y4");
       }
-      if (block.classList.contains("y5")) {
+      if (block.classList.contains("y4")) {
         setTimeout(() => {
           block.classList.add("x0", "y0");
-          block.classList.remove("y5", "x1", "x2", "x3");
+          block.classList.remove("y4", "x1", "x2", "x3");
         }, 600);
       }
     });
@@ -516,17 +475,14 @@ const callY = () => {
 };
 
 const callYy = () => {
-  let choise = Math.floor(Math.random() * 3) + 1;
+  let choise = Math.floor(Math.random() * 2) + 1;
 
-  document.querySelector(".x0").classList.add(`x${choise}`, "y5");
+  document.querySelector(".x0").classList.add(`x${choise}`, "y4");
   document.querySelector(".x0").classList.remove("x0", "y0");
   setTimeout(() => {
     let blocks = document.querySelectorAll(`.x${choise}`);
     blocks.forEach((block) => {
-      if (block.classList.contains("y5")) {
-        block.classList.add("y4");
-        block.classList.remove("y5");
-      } else if (block.classList.contains("y4")) {
+      if (block.classList.contains("y4")) {
         block.classList.add("y3");
         block.classList.remove("y4");
       } else if (block.classList.contains("y3")) {

@@ -507,8 +507,9 @@ body {
   z-index: 2;
 
   .project-slider {
-    width: 60%;
-    height: 100%;
+    width: 45%;
+    height: 85%;
+    margin-left: 2vw;
     position: relative;
     overflow: hidden;
 
@@ -521,7 +522,7 @@ body {
       pointer-events: none;
     }
     .x0 {
-      left: -33.3%;
+      left: -50%;
       z-index: 0 !important;
     }
 
@@ -530,20 +531,20 @@ body {
     }
 
     .x2 {
-      left: 33.3%;
+      left: 50%;
     }
 
     .x3 {
-      left: 66.6%;
+      left: 100%;
+      z-index: 0 !important;
     }
 
     .x4 {
       left: 99.9%;
-      z-index: 0 !important;
     }
 
     .y0 {
-      top: -25%;
+      top: -33.4%;
       z-index: 0 !important;
     }
 
@@ -552,32 +553,28 @@ body {
     }
 
     .y2 {
-      top: 25%;
+      top: 33.4%;
     }
 
     .y3 {
-      top: 50%;
+      top: 66.7%;
     }
 
     .y4 {
-      top: 75%;
-    }
-
-    .y5 {
       top: 100%;
       z-index: 0 !important;
     }
 
     .moving {
       z-index: 0 !important;
-      top: -25%;
-      left: -33.4%;
+      top: -33.5%;
+      left: -50%;
     }
 
     .pro {
       position: absolute;
-      width: 33.4%;
-      height: 25%;
+      width: 50%;
+      height: 33.4%;
       transition: 0.6s ease-in-out;
       background-size: cover;
       background-position: center;
@@ -630,7 +627,7 @@ body {
   .pro-text {
     position: absolute;
     top: 0;
-    left: 60%;
+    left: 50%;
     width: 100%;
     height: 100%;
   }

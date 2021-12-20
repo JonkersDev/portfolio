@@ -620,8 +620,9 @@ body .left-container .right-container-container .right-container .snear {
 }
 
 .project-page .project-slider {
-  width: 60%;
-  height: 100%;
+  width: 45%;
+  height: 85%;
+  margin-left: 2vw;
   position: relative;
   overflow: hidden;
 }
@@ -636,7 +637,7 @@ body .left-container .right-container-container .right-container .snear {
 }
 
 .project-page .project-slider .x0 {
-  left: -33.3%;
+  left: -50%;
   z-index: 0 !important;
 }
 
@@ -645,20 +646,20 @@ body .left-container .right-container-container .right-container .snear {
 }
 
 .project-page .project-slider .x2 {
-  left: 33.3%;
+  left: 50%;
 }
 
 .project-page .project-slider .x3 {
-  left: 66.6%;
+  left: 100%;
+  z-index: 0 !important;
 }
 
 .project-page .project-slider .x4 {
   left: 99.9%;
-  z-index: 0 !important;
 }
 
 .project-page .project-slider .y0 {
-  top: -25%;
+  top: -33.4%;
   z-index: 0 !important;
 }
 
@@ -667,32 +668,28 @@ body .left-container .right-container-container .right-container .snear {
 }
 
 .project-page .project-slider .y2 {
-  top: 25%;
+  top: 33.4%;
 }
 
 .project-page .project-slider .y3 {
-  top: 50%;
+  top: 66.7%;
 }
 
 .project-page .project-slider .y4 {
-  top: 75%;
-}
-
-.project-page .project-slider .y5 {
   top: 100%;
   z-index: 0 !important;
 }
 
 .project-page .project-slider .moving {
   z-index: 0 !important;
-  top: -25%;
-  left: -33.4%;
+  top: -33.5%;
+  left: -50%;
 }
 
 .project-page .project-slider .pro {
   position: absolute;
-  width: 33.4%;
-  height: 25%;
+  width: 50%;
+  height: 33.4%;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
   background-size: cover;
@@ -752,7 +749,7 @@ body .left-container .right-container-container .right-container .snear {
 .project-page .pro-text {
   position: absolute;
   top: 0;
-  left: 60%;
+  left: 50%;
   width: 100%;
   height: 100%;
 }
